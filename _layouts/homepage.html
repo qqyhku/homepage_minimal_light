@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>{{ site.title }} | {{site.affiliation}}</title>
+    <title>{{ site.title }} | HKU</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,6 +44,9 @@
         {% endif %}
 
         <h1>{{ site.title }}</h1>
+        {% if site.name_chinese %}
+        <h2 style="font-size: 1.2em; font-weight: normal; margin: 5px 0; color: var(--text-color); opacity: 0.8;">{{ site.name_chinese }}</h2>
+        {% endif %}
 
         {% if site.position %}
         <position style="font-size:1.10rem;">{{ site.position }}</position>

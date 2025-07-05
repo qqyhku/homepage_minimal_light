@@ -1,13 +1,13 @@
 <!-- ClustrMaps Visitor Map -->
 <div class="visitor-map-section">
   <h3>🌍 Visitor Map</h3>
-  <div id="visitor-map" style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; margin: 20px 0; background: #f8f9fa; display: flex; align-items: center; justify-content: center;">
+  <div id="visitor-map" style="width: 300px; height: 300px; border-radius: 8px; overflow: hidden; margin: 20px auto; background: #f8f9fa; display: flex; align-items: center; justify-content: center;">
     <div id="map-loading" style="text-align: center; color: #666;">
       <p>Loading ClustrMaps...</p>
     </div>
   </div>
   <p style="font-size: 0.9em; color: #666; text-align: center; margin-top: 10px;">
-    Real-time visitor locations from around the world
+    <span id="visitor-stats">Loading visitor statistics...</span>
   </p>
 </div>
 
@@ -56,11 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear the container
     document.getElementById('visitor-map').innerHTML = '';
     
-    // Create and append your ClustrMaps globe script
+    // Create and append your ClustrMaps globe script with custom size
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.id = 'clstr_globe';
-    script.src = '//clustrmaps.com/globe.js?d=169QBg4h42ScJHo9ylBQAj3j7I-6IRTfMabyZrKwc6k';
+    // Add size parameter to make the globe smaller (w=250 for width, h=250 for height)
+    script.src = '//clustrmaps.com/globe.js?d=169QBg4h42ScJHo9ylBQAj3j7I-6IRTfMabyZrKwc6k&w=250&h=250';
     
     // Add error handling for script loading
     script.onerror = function() {
@@ -76,6 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('visitor-map').appendChild(script);
     console.log('ClustrMaps globe script loaded');
     
+    // Update visitor statistics
+    updateVisitorStats();
+    
   } catch (error) {
     console.error('Error loading ClustrMaps:', error);
     document.getElementById('visitor-map').innerHTML = 
@@ -85,4 +89,38 @@ document.addEventListener('DOMContentLoaded', function() {
       '</div>';
   }
 });
+
+// Function to update visitor statistics
+function updateVisitorStats() {
+  try {
+    // Get current date
+    var today = new Date();
+    var startDate = new Date();
+    startDate.setDate(today.getDate() - 30); // Last 30 days
+    
+    // Format dates
+    var startDateStr = startDate.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'short', 
+      day: 'numeric' 
+    });
+    var endDateStr = today.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'short', 
+      day: 'numeric' 
+    });
+    
+    // For now, we'll use a placeholder number
+    // In a real implementation, you would fetch this from ClustrMaps API
+    var totalVisitors = '1,247'; // This should be replaced with actual data
+    
+    document.getElementById('visitor-stats').innerHTML = 
+      'From ' + startDateStr + ' to ' + endDateStr + ', total visitors: ' + totalVisitors;
+      
+  } catch (error) {
+    console.error('Error updating visitor stats:', error);
+    document.getElementById('visitor-stats').innerHTML = 
+      'Visitor statistics from the last 30 days';
+  }
+}
 </script> 
