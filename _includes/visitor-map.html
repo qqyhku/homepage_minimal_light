@@ -45,63 +45,44 @@
 // You can get your custom widget code from https://clustrmaps.com/
 // This is a sample widget - replace with your actual ClustrMaps widget code
 
-function loadClustrMaps() {
+// ClustrMaps Widget Code - Your actual widget is loaded below
+
+// Your ClustrMaps Globe Widget
+document.addEventListener('DOMContentLoaded', function() {
   try {
     // Remove loading message
     document.getElementById('map-loading').style.display = 'none';
     
-    // For now, we'll show a placeholder with instructions
-    document.getElementById('visitor-map').innerHTML = 
-      '<div style="text-align: center; color: #666; padding: 50px;">' +
-        '<h4>🌍 ClustrMaps Widget</h4>' +
-        '<p>To display your visitor map:</p>' +
-        '<ol style="text-align: left; max-width: 400px; margin: 20px auto;">' +
-          '<li>Visit <a href="https://clustrmaps.com/" target="_blank">ClustrMaps.com</a></li>' +
-          '<li>Click "Get Map Widget"</li>' +
-          '<li>Enter your website URL</li>' +
-          '<li>Copy the widget code</li>' +
-          '<li>Replace the script in this file</li>' +
-        '</ol>' +
-        '<p><strong>Your ClustrMaps Globe Widget:</strong></p>' +
-        '<code style="background: #f0f0f0; padding: 10px; border-radius: 4px; display: block; margin: 10px 0; font-size: 0.8em;">' +
-          '&lt;script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=169QBg4h42ScJHo9ylBQAj3j7I-6IRTfMabyZrKwc6k"&gt;&lt;/script&gt;' +
-        '</code>' +
-      '</div>';
+    // Clear the container
+    document.getElementById('visitor-map').innerHTML = '';
     
-    console.log('ClustrMaps placeholder loaded');
+    // Create and append your ClustrMaps globe script
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.id = 'clstr_globe';
+    script.src = '//clustrmaps.com/globe.js?d=169QBg4h42ScJHo9ylBQAj3j7I-6IRTfMabyZrKwc6k';
+    
+    // Add error handling for script loading
+    script.onerror = function() {
+      console.error('Failed to load ClustrMaps script');
+      document.getElementById('visitor-map').innerHTML = 
+        '<div style="text-align: center; color: #666; padding: 50px;">' +
+          '<h4>🌍 ClustrMaps Globe</h4>' +
+          '<p>Failed to load visitor map. Please try refreshing the page.</p>' +
+          '<p>If the problem persists, check your internet connection.</p>' +
+        '</div>';
+    };
+    
+    document.getElementById('visitor-map').appendChild(script);
+    console.log('ClustrMaps globe script loaded');
+    
   } catch (error) {
     console.error('Error loading ClustrMaps:', error);
-    document.getElementById('visitor-map').innerHTML = '<p style="text-align: center; color: #666; padding: 50px;">Failed to load ClustrMaps. Please try refreshing the page.</p>';
+    document.getElementById('visitor-map').innerHTML = 
+      '<div style="text-align: center; color: #666; padding: 50px;">' +
+        '<h4>🌍 ClustrMaps Globe</h4>' +
+        '<p>Error loading visitor map: ' + error.message + '</p>' +
+      '</div>';
   }
-}
-
-// Load ClustrMaps when page is ready
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(loadClustrMaps, 1000);
-});
-
-// Alternative: Direct ClustrMaps integration
-// Uncomment the following lines and replace YOUR_SITE_ID with your actual ClustrMaps site ID
-/*
-document.addEventListener('DOMContentLoaded', function() {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.id = 'clustrmaps';
-  script.src = '//clustrmaps.com/map_v2.js?d=YOUR_SITE_ID&cl=ffffff&w=300&t=tt';
-  document.getElementById('visitor-map').appendChild(script);
-});
-*/
-
-// Your ClustrMaps Globe Widget
-document.addEventListener('DOMContentLoaded', function() {
-  // Remove loading message
-  document.getElementById('map-loading').style.display = 'none';
-  
-  // Create and append your ClustrMaps globe script
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.id = 'clstr_globe';
-  script.src = '//clustrmaps.com/globe.js?d=169QBg4h42ScJHo9ylBQAj3j7I-6IRTfMabyZrKwc6k';
-  document.getElementById('visitor-map').appendChild(script);
 });
 </script> 
