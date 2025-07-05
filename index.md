@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at the [School of Computing and Data Science](https://www.cds.hku.hk/), The University of Hong Kong, working on robotics and mechanical engineering. My research focuses on robotic grasping and manipulation, including the development of adaptive grippers and the integration of computer vision and tactile sensing for intelligent object handling. I am supervised by [Prof. Dong Xu](https://www.cs.hku.hk/people/academic-staff/dongxu) and [Prof. Peng Lu](https://mech.hku.hk/academic-staff/lu-p).
+I am a Ph.D. student at the [School of Computing and Data Science](https://www.cds.hku.hk/), The University of Hong Kong, supervised by [Prof. Dong Xu](https://www.cs.hku.hk/people/academic-staff/dongxu) and [Prof. Peng Lu](https://mech.hku.hk/academic-staff/lu-p), working on robotics and mechanical engineering. My research focuses on robotic grasping and manipulation, including the development of adaptive grippers and the integration of computer vision and tactile sensing for intelligent object handling. During my undergraduate studies at Zhejiang University, I received guidance from [Prof. Jian Chen](https://www.sustech.edu.cn/en/faculties/jianchen.html) and [Prof. Weifei Hu](https://person.zju.edu.cn/en/weifei).
 
 ## Education
 

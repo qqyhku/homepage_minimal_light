@@ -8,7 +8,7 @@ email: qiaoqy@connect.hku.hk
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: qiyuan qiao, qiyuan, qiao, qiyuan qiao's homepage, qiyuan qiao's website, qiyuan qiao's blog, qiyuan qiao's research, qiyuan qiao's publications, qiyuan qiao's projects, qiyuan qiao's code, qiyuan qiao's data, qiyuan qiao's software, qiyuan qiao's tools, qiyuan qiao's resources, qiyuan qiao's tutorials, qiyuan qiao's guides, qiyuan qiao's tips, qiyuan qiao's tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's best practices, qiyuan qiao's recommendations, qiyuan qiao's advice, qiyuan qiao's tips and tricks, qiyuan qiao's be.
+keywords: qiyuan qiao, qiyuan, 乔启元, 喬啟元, 喬启元, qiao, qiaoyuan, qiao qiyuan, qiyuanqiao, 香港大学, 香港大學, HKU, University of Hong Kong, 计算机科学, 電腦科學, Computer Science, 机器人, 機器人, robotics, robotic grasping, 机械工程, 機械工程, mechanical engineering, 计算机视觉, 電腦視覺, computer vision, 触觉感知, 觸覺感知, tactile sensing, 自适应抓取, 自適應抓取, adaptive grasping, 乔启元主页, 喬啟元主頁, qiyuan qiao homepage, qiyuan qiao website, qiyuan qiao research, qiyuan qiao publications, 乔启元研究, 喬啟元研究, 乔启元论文, 喬啟元論文
 description: Qiyuan Qiao's homepage
 canonical: https://qiaoqiyuan.com/
 
@@ -51,9 +51,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - README_zh_Hans.md
-  - README_zh_Hant.md
-  - README_de.md
   - LICENSE
   - minimal-light.gemspec
   - html_source_file/
