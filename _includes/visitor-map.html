@@ -1,7 +1,7 @@
 <!-- ClustrMaps Visitor Map -->
 <div class="visitor-map-section">
   <h3>🌍 Visitor Map</h3>
-  <div id="visitor-map" style="width: 200px; height: 150px; border-radius: 8px; overflow: hidden; margin: 20px auto; background: #f8f9fa; display: flex; align-items: center; justify-content: center;">
+  <div id="visitor-map" style="width: 300px; height: 200px; border-radius: 8px; overflow: hidden; margin: 20px auto; background: #f8f9fa; display: flex; align-items: center; justify-content: center;">
     <div id="map-loading" style="text-align: center; color: #666;">
       <p>Loading ClustrMaps...</p>
     </div>
@@ -47,7 +47,7 @@
 
 // ClustrMaps Widget Code - Your actual widget is loaded below
 
-// Your ClustrMaps Globe Widget
+// Your ClustrMaps Map Widget
 document.addEventListener('DOMContentLoaded', function() {
   try {
     // Remove loading message
@@ -60,21 +60,21 @@ document.addEventListener('DOMContentLoaded', function() {
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.id = 'clustrmaps';
-    script.src = '"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=169QBg4h42ScJHo9ylBQAj3j7I-6IRTfMabyZrKwc6k';
+    script.src = '//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=169QBg4h42ScJHo9ylBQAj3j7I-6IRTfMabyZrKwc6k';
     
     // Add error handling for script loading
     script.onerror = function() {
       console.error('Failed to load ClustrMaps script');
       document.getElementById('visitor-map').innerHTML = 
         '<div style="text-align: center; color: #666; padding: 50px;">' +
-          '<h4>🌍 ClustrMaps Globe</h4>' +
+          '<h4>🌍 ClustrMaps Map</h4>' +
           '<p>Failed to load visitor map. Please try refreshing the page.</p>' +
           '<p>If the problem persists, check your internet connection.</p>' +
         '</div>';
     };
     
     document.getElementById('visitor-map').appendChild(script);
-    console.log('ClustrMaps globe script loaded');
+    console.log('ClustrMaps map script loaded');
     
     // Update visitor statistics
     updateVisitorStats();
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('Error loading ClustrMaps:', error);
     document.getElementById('visitor-map').innerHTML = 
       '<div style="text-align: center; color: #666; padding: 50px;">' +
-        '<h4>🌍 ClustrMaps Globe</h4>' +
+        '<h4>🌍 ClustrMaps Map</h4>' +
         '<p>Error loading visitor map: ' + error.message + '</p>' +
       '</div>';
   }
