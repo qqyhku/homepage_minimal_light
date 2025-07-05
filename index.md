@@ -4,9 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at the [School of Computing and Data Science](https://www.cds.hku.hk/), The University of Hong Kong, working on robotics and mechanical engineering. My research focuses on developing innovative robotic grippers and manipulation systems for handling complex objects.
-
-I am supervised by [Prof. Dong Xu](https://www.cs.hku.hk/people/academic-staff/dongxu) and [Prof. Peng Lu](https://mech.hku.hk/academic-staff/lu-p).
+I am a Ph.D. student at the [School of Computing and Data Science](https://www.cds.hku.hk/), The University of Hong Kong, working on robotics and mechanical engineering. My research focuses on robotic grasping and manipulation, including the development of adaptive grippers and the integration of computer vision and tactile sensing for intelligent object handling. I am supervised by [Prof. Dong Xu](https://www.cs.hku.hk/people/academic-staff/dongxu) and [Prof. Peng Lu](https://mech.hku.hk/academic-staff/lu-p).
 
 ## Education
 
@@ -16,9 +14,10 @@ I am supervised by [Prof. Dong Xu](https://www.cs.hku.hk/people/academic-staff/d
 
 ## Research Interests
 
-- **Robotics:** robotic grippers, manipulation systems, shape-adaptive grasping
-- **Mechanical Engineering:** mechanism design, dynamic modeling, control systems
-- **Computer Vision:** object recognition, pose estimation for robotic applications
+- **Robotic Grasping:** Adaptive gripper design, shape-adaptive grasping, and manipulation planning
+- **Computer Vision for Robotics:** 3D reconstruction, object recognition, and pose estimation for grasping
+- **Tactile Intelligence:** Tactile sensing and embodied intelligence for robotic manipulation
+- **Mechanical Design:** Mechanism design, dynamic modeling, and control systems
 
 ## News
 
