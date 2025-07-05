@@ -1,5 +1,15 @@
 main:
 
+  - title: Lasso Gripper: A String Shooting-Retracting Mechanism for Shape-Adaptive Grasping
+    authors: <strong>Qiyuan Qiao</strong>, Yu Wang, Xiyu Fan, Peng Lu
+    conference_short: arXiv
+    conference: arXiv preprint <strong>(arXiv:2506.14163)</strong>, 2025.
+    pdf: https://arxiv.org/pdf/2506.14163.pdf
+    page: https://arxiv.org/abs/2506.14163
+    bibtex: https://arxiv.org/abs/2506.14163
+    notes: Preprint
+    image: ./assets/img/teaser_example.png
+
   - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
     authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
     conference_short: MICCAI
