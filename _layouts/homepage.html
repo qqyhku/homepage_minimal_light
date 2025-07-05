@@ -89,8 +89,20 @@
         {% endif %}
 
         {% if site.twitter %}
-        <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
+        <a style="margin: 0 5px 0 0" href="{{ site.twitter }}">
           <i class="fab fa-x-twitter"></i>
+        </a>
+        {% endif %}
+
+        {% if site.orcid %}
+        <a style="margin: 0 5px 0 0" href="{{ site.orcid }}" target="_blank">
+          <i class="ai ai-orcid" style="font-size:1.2rem"></i>
+        </a>
+        {% endif %}
+
+        {% if site.wechat %}
+        <a style="margin: 0 0 0 0" href="javascript:void(0);" onclick="showWeChat('{{ site.wechat }}')" title="WeChat: {{ site.wechat }}">
+          <i class="fab fa-weixin"></i>
         </a>
         {% endif %}
         </div>
@@ -113,6 +125,13 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    
+    <script>
+    function showWeChat(wechatId) {
+      alert('WeChat ID: ' + wechatId + '\n\nPlease add me on WeChat!');
+    }
+    </script>
+    
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

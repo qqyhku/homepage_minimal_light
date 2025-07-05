@@ -8,7 +8,7 @@ email: qiaoqy@connect.hku.hk
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: qiyuan qiao, qiyuan, 乔启元, 喬啟元, 喬启元, qiao, qiaoyuan, qiao qiyuan, qiyuanqiao, 香港大学, 香港大學, HKU, University of Hong Kong, 计算机科学, 電腦科學, Computer Science, 机器人, 機器人, robotics, robotic grasping, 机械工程, 機械工程, mechanical engineering, 计算机视觉, 電腦視覺, computer vision, 触觉感知, 觸覺感知, tactile sensing, 自适应抓取, 自適應抓取, adaptive grasping, 乔启元主页, 喬啟元主頁, qiyuan qiao homepage, qiyuan qiao website, qiyuan qiao research, qiyuan qiao publications, 乔启元研究, 喬啟元研究, 乔启元论文, 喬啟元論文
+keywords: qiyuan qiao, qiyuan, 乔启元, 喬啟元, qqy, qiaoqy, 喬启元, qiao, qiaoyuan, qiao qiyuan, qiyuanqiao, 香港大学, 香港大學, HKU, University of Hong Kong, 计算机科学, 電腦科學, Computer Science, 机器人, 機器人, robotics, robotic grasping, 机械工程, 機械工程, mechanical engineering, 计算机视觉, 電腦視覺, computer vision, 触觉感知, 觸覺感知, tactile sensing, 自适应抓取, 自適應抓取, adaptive grasping, 乔启元主页, 喬啟元主頁, qiyuan qiao homepage, qiyuan qiao website, qiyuan qiao research, qiyuan qiao publications, 乔启元研究, 喬啟元研究, 乔启元论文, 喬啟元論文
 description: Qiyuan Qiao's homepage
 canonical: https://qiaoqiyuan.com/
 
@@ -18,6 +18,8 @@ canonical: https://qiaoqiyuan.com/
 cv_link: assets/files/curriculum_vitae.pdf
 github_link: https://github.com/qiaoqy
 linkedin: https://www.linkedin.com/in/qiyuan-qiao-b337601b9/?originalSubdomain=hk
+orcid: https://orcid.org/0009-0006-9154-9040
+wechat: qiaoqy2000
 # twitter: https://twitter.com/
 
 # Images (e.g., your profile picture and your website's favicon) 
