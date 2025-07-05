@@ -1,8 +1,10 @@
 <!-- Simple Visitor Map -->
 <div class="visitor-map-section">
   <h3>🌍 Visitor Map</h3>
-  <div id="visitor-map" style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; margin: 20px 0;">
-    <!-- Map will be loaded here -->
+  <div id="visitor-map" style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; margin: 20px 0; background: #f8f9fa; display: flex; align-items: center; justify-content: center;">
+    <div id="map-loading" style="text-align: center; color: #666;">
+      <p>Loading map...</p>
+    </div>
   </div>
   <p style="font-size: 0.9em; color: #666; text-align: center; margin-top: 10px;">
     Showing visitor locations from the last 30 days
@@ -32,51 +34,87 @@
 }
 </style>
 
+<!-- Load Google Charts API -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 <script>
+// Check if Google Charts is available
+if (typeof google === 'undefined') {
+  document.getElementById('map-loading').innerHTML = '<p>Google Charts not available. Loading...</p>';
+}
+
 // Load Google Charts API
 google.charts.load('current', {
-  'packages': ['geochart'],
-  'mapsApiKey': 'AIzaSyC3BfjVWY07EkJFEl8Og4mKk98tEW_loSw' // Replace with your Google Maps API key
+  'packages': ['geochart']
 });
 
-google.charts.setOnLoadCallback(drawRegionsMap);
-
 function drawRegionsMap() {
-  // Sample data - replace with real data from Google Analytics
-  var data = google.visualization.arrayToDataTable([
-    ['Country', 'Visitors'],
-    ['China', 100],
-    ['United States', 50],
-    ['Hong Kong', 30],
-    ['United Kingdom', 20],
-    ['Germany', 15],
-    ['Japan', 10],
-    ['Canada', 8],
-    ['Australia', 5]
-  ]);
+  try {
+    // Remove loading message
+    document.getElementById('map-loading').style.display = 'none';
+    
+    // Sample data - replace with real data from Google Analytics
+    var data = google.visualization.arrayToDataTable([
+      ['Country', 'Visitors'],
+      ['China', 100],
+      ['United States', 50],
+      ['Hong Kong', 30],
+      ['United Kingdom', 20],
+      ['Germany', 15],
+      ['Japan', 10],
+      ['Canada', 8],
+      ['Australia', 5]
+    ]);
 
-  var options = {
-    region: 'world',
-    colorAxis: {colors: ['#e8f4fd', '#0066cc']},
-    backgroundColor: 'transparent',
-    datalessRegionColor: '#f8f9fa',
-    defaultColor: '#e8f4fd',
-    tooltip: {textStyle: {color: '#333'}, showColorCode: true},
-    magnifyingGlass: {enable: true, zoomFactor: 5.0},
-    keepAspectRatio: true
-  };
+    var options = {
+      region: 'world',
+      colorAxis: {colors: ['#e8f4fd', '#0066cc']},
+      backgroundColor: '#ffffff',
+      datalessRegionColor: '#f8f9fa',
+      defaultColor: '#e8f4fd',
+      tooltip: {textStyle: {color: '#333'}, showColorCode: true},
+      magnifyingGlass: {enable: true, zoomFactor: 5.0},
+      keepAspectRatio: true,
+      resolution: 'countries'
+    };
 
-  var chart = new google.visualization.GeoChart(document.getElementById('visitor-map'));
-  chart.draw(data, options);
+    var chart = new google.visualization.GeoChart(document.getElementById('visitor-map'));
+    chart.draw(data, options);
+    
+    console.log('Map loaded successfully');
+  } catch (error) {
+    console.error('Error drawing map:', error);
+    document.getElementById('visitor-map').innerHTML = '<p style="text-align: center; color: #666; padding: 50px;">Map loading failed. Please try refreshing the page.</p>';
+  }
 }
+
+// Set callback when Google Charts is loaded
+google.charts.setOnLoadCallback(function() {
+  console.log('Google Charts loaded');
+  drawRegionsMap();
+});
 
 // Responsive handling
 window.addEventListener('resize', function() {
   if (typeof google !== 'undefined' && google.visualization) {
-    drawRegionsMap();
+    setTimeout(drawRegionsMap, 100);
   }
 });
-</script>
 
-<!-- Load Google Charts API -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+// Fallback if Google Charts fails to load
+setTimeout(function() {
+  if (typeof google === 'undefined' || !google.visualization) {
+    console.log('Google Charts failed to load, showing fallback');
+    document.getElementById('visitor-map').innerHTML = `
+      <div style="text-align: center; color: #666; padding: 50px;">
+        <h4>Visitor Locations</h4>
+        <p>China: 100 visitors</p>
+        <p>United States: 50 visitors</p>
+        <p>Hong Kong: 30 visitors</p>
+        <p>United Kingdom: 20 visitors</p>
+        <p>Germany: 15 visitors</p>
+      </div>
+    `;
+  }
+}, 5000);
+</script> 
