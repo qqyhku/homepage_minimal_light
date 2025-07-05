@@ -1,0 +1,82 @@
+<!-- Simple Visitor Map -->
+<div class="visitor-map-section">
+  <h3>🌍 Visitor Map</h3>
+  <div id="visitor-map" style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; margin: 20px 0;">
+    <!-- Map will be loaded here -->
+  </div>
+  <p style="font-size: 0.9em; color: #666; text-align: center; margin-top: 10px;">
+    Showing visitor locations from the last 30 days
+  </p>
+</div>
+
+<style>
+.visitor-map-section {
+  margin: 30px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.visitor-map-section h3 {
+  margin: 0 0 15px 0;
+  color: var(--text-color);
+  font-size: 1.2em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .visitor-map-section {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+</style>
+
+<script>
+// Load Google Charts API
+google.charts.load('current', {
+  'packages': ['geochart'],
+  'mapsApiKey': 'AIzaSyC3BfjVWY07EkJFEl8Og4mKk98tEW_loSw' // Replace with your Google Maps API key
+});
+
+google.charts.setOnLoadCallback(drawRegionsMap);
+
+function drawRegionsMap() {
+  // Sample data - replace with real data from Google Analytics
+  var data = google.visualization.arrayToDataTable([
+    ['Country', 'Visitors'],
+    ['China', 100],
+    ['United States', 50],
+    ['Hong Kong', 30],
+    ['United Kingdom', 20],
+    ['Germany', 15],
+    ['Japan', 10],
+    ['Canada', 8],
+    ['Australia', 5]
+  ]);
+
+  var options = {
+    region: 'world',
+    colorAxis: {colors: ['#e8f4fd', '#0066cc']},
+    backgroundColor: 'transparent',
+    datalessRegionColor: '#f8f9fa',
+    defaultColor: '#e8f4fd',
+    tooltip: {textStyle: {color: '#333'}, showColorCode: true},
+    magnifyingGlass: {enable: true, zoomFactor: 5.0},
+    keepAspectRatio: true
+  };
+
+  var chart = new google.visualization.GeoChart(document.getElementById('visitor-map'));
+  chart.draw(data, options);
+}
+
+// Responsive handling
+window.addEventListener('resize', function() {
+  if (typeof google !== 'undefined' && google.visualization) {
+    drawRegionsMap();
+  }
+});
+</script>
+
+<!-- Load Google Charts API -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 

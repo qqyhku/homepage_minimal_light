@@ -6,7 +6,7 @@ layout: homepage
 
 I am a Ph.D. student at the [School of Computing and Data Science](https://www.cds.hku.hk/), The University of Hong Kong, working on robotics and mechanical engineering. My research focuses on developing innovative robotic grippers and manipulation systems for handling complex objects.
 
-I am supervised by [Prof. Xu Dong](https://www.cs.hku.hk/people/academic-staff/dongxu) and [Prof. Peng Lu](https://mech.hku.hk/academic-staff/lu-p).
+I am supervised by [Prof. Dong Xu](https://www.cs.hku.hk/people/academic-staff/dongxu) and [Prof. Peng Lu](https://mech.hku.hk/academic-staff/lu-p).
 
 ## Education
 
@@ -28,3 +28,5 @@ I am supervised by [Prof. Xu Dong](https://www.cs.hku.hk/people/academic-staff/d
 {% include_relative _includes/publications.md %}
 
 {% include_relative _includes/services.md %}
+
+{% include_relative _includes/visitor-map.html %}
